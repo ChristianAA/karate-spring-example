@@ -1,0 +1,10 @@
+{
+  "id": "#number",
+  "name": "#string",
+  "expansion": "#string",
+  "army_type": "#string",
+  "unique_unit": "#array",
+  "unique_tech": "#array",
+  "team_bonus": "#string",
+  "civilization_bonus": "#array"
+}
