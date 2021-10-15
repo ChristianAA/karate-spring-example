@@ -15,7 +15,7 @@ It includes some basic GET tests that are executed against the **Age Of Empires 
 2. Open a terminal
 3. From the project root directory run:  
 
- `mvn test`
+ `mvn clean test`
 
 # Karate Environment
 
@@ -58,13 +58,13 @@ For example, specific variables of an integration environment can be defined by 
 
 To run the tests with this profile, execute:
 
-`mvn test -Dspring.profiles.active=jenkins`
+`mvn clean test -Dspring.profiles.active=jenkins`
 
 All the properties defined in **application-jenkins.properties** file will overwrite the ones in **application.properties** file.
  
 # Results
 
-To view the test report, open the **'/karate-spring-example/results/cucumber-html-reports/overview-features.html'** file once
+To view the test report, open the **'/karate-spring-example/target/karate-reports/karate-summary.html'** file once
 the execution has finished.
 
 # Links

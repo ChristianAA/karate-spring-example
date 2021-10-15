@@ -5,7 +5,7 @@
 
     <groupId>com.example.karate</groupId>
     <artifactId>karate-spring-example</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>Karate Spring Example</name>
     <description>REST API testing project with Karate+Spring</description>
 
@@ -16,11 +16,11 @@
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-        <karate.version>0.9.4</karate.version>
+        <karate.version>1.1.0</karate.version>
+        <spring.version>5.3.11</spring.version>
         <logging.version>1.7.28</logging.version>
-        <reporting.version>4.10.0</reporting.version>
+        <apache.commons.version>3.12.0</apache.commons.version>
         <surefire.version>3.0.0-M3</surefire.version>
-        <surefire.threads>3</surefire.threads>
 
     </properties>
 
@@ -71,21 +71,21 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>5.2.5.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>5.2.5.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.2.5.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- Spring -->
@@ -119,36 +119,17 @@
         <!-- Karate -->
         <dependency>
             <groupId>com.intuit.karate</groupId>
-            <artifactId>karate-core</artifactId>
-            <version>${karate.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.intuit.karate</groupId>
-            <artifactId>karate-apache</artifactId>
-            <version>${karate.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.intuit.karate</groupId>
             <artifactId>karate-junit4</artifactId>
             <version>${karate.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- /Karate -->
 
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
-            <groupId>net.masterthought</groupId>
-            <artifactId>cucumber-reporting</artifactId>
-            <version>${reporting.version}</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${apache.commons.version}</version>
         </dependency>
 
     </dependencies>
