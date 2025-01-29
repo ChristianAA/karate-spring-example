@@ -5,22 +5,22 @@
 
     <groupId>com.example.karate</groupId>
     <artifactId>karate-spring-example</artifactId>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
     <name>Karate Spring Example</name>
     <description>REST API testing project with Karate+Spring</description>
 
     <properties>
 
-        <maven.compiler.version>3.8.1</maven.compiler.version>
-        <java.version>8</java.version>
+        <maven.compiler.version>3.10.1</maven.compiler.version>
+        <java.version>17</java.version>
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-        <karate.version>1.1.0</karate.version>
-        <spring.version>5.3.18</spring.version>
-        <logging.version>1.7.28</logging.version>
-        <apache.commons.version>3.12.0</apache.commons.version>
-        <surefire.version>3.0.0-M3</surefire.version>
+        <karate.version>1.5.1</karate.version>
+        <reporting.version>5.8.4</reporting.version>
+        <junit.version>5.11.0-M2</junit.version>
+        <spring.version>5.3.27</spring.version>
+        <surefire.version>3.0.0-M8</surefire.version>
 
     </properties>
 
@@ -60,7 +60,6 @@
                     <compilerArgument>-Werror</compilerArgument>
                 </configuration>
             </plugin>
-
         </plugins>
 
     </build>
@@ -90,47 +89,29 @@
         </dependency>
         <!-- Spring -->
 
-        <!-- Logging bridge -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${logging.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>log4j-over-slf4j</artifactId>
-            <version>${logging.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jul-to-slf4j</artifactId>
-            <version>${logging.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>${logging.version}</version>
-        </dependency>
-        <!-- /Logging bridge -->
-
         <!-- Karate -->
         <dependency>
-            <groupId>com.intuit.karate</groupId>
-            <artifactId>karate-junit4</artifactId>
+            <groupId>io.karatelabs</groupId>
+            <artifactId>karate-junit5</artifactId>
             <version>${karate.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- /Karate -->
 
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <!-- /Report -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${apache.commons.version}</version>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>${reporting.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
+        <!-- /Report -->
 
     </dependencies>
 </project>

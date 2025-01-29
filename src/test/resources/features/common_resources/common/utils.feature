@@ -1,4 +1,4 @@
-Feature: COMMON UTILS
+Feature: Javascript Utils/Helpers
 
 @ignore
 Scenario: Javascript Utils/Helpers

@@ -1,0 +1,13 @@
+{
+    "id": "#number",
+    "title": "#string? _.length > 0",
+    "thumbnail": "#string? _.length > 0",
+    "short_description": "#string? _.length > 0",
+    "game_url": "#string? _.length > 0",
+    "genre": "#string? _.length > 0",
+    "platform": "#string? _.length > 0",
+    "publisher": "#string? _.length > 0",
+    "developer": "#string? _.length > 0",
+    "release_date": "#string? _.length > 0",
+    "freetogame_profile_url": "#string? _.length > 0"
+}

@@ -2,12 +2,12 @@
 
 This repository contains the base setup of a REST API testing project, implemented with Karate + Spring Framework.
 
-It includes some basic GET tests that are executed against the **Age Of Empires II** API.
+It includes some basic GET tests that are executed against the **[FREE TO GAME](https://www.freetogame.com/api-doc)** API.
 
 # Requirements
 
-* JDK 8
-* Maven >= 3.6
+* JDK 17
+* Maven >= 3.8.7
 
 # Test Execution
 
@@ -25,10 +25,10 @@ to change API's base url depending on the environment:
 ```
     // BASE_URL
     if(env == 'test') {
-        config.BASE_URL = 'https://age-of-empires-2-api.herokuapp.com/api/v1/';
+        config.BASE_URL = 'https://www.freetogame.com/api/';
     }
     else if(env == 'jenkins') {
-        config.BASE_URL = 'https://age-of-empires-2-api.herokuapp.com/api/v1/';
+        config.BASE_URL = 'https://www.freetogame.com/api/';
     }
 ```
 
@@ -67,8 +67,10 @@ All the properties defined in **application-jenkins.properties** file will overw
 To view the test report, open the **'/karate-spring-example/target/karate-reports/karate-summary.html'** file once
 the execution has finished.
 
+There is another html report also in: **'/karate-spring-example-develop/target/cucumber-html-reports/0'** folder.
+
 # Links
     
    [Karate Framework](https://github.com/intuit/karate)
    
-   [Age of Empires II resources API](https://age-of-empires-2-api.herokuapp.com/docs/)
+   [Free to game API documentation](https://www.freetogame.com/api/)
