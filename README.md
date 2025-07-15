@@ -67,7 +67,7 @@ All the properties defined in **application-jenkins.properties** file will overw
 To view the test report, open the **'/karate-spring-example/target/karate-reports/karate-summary.html'** file once
 the execution has finished.
 
-There is another html report also in: **'/karate-spring-example-develop/target/cucumber-html-reports/0'** folder.
+There is another html report also in: **'/karate-spring-example/target/cucumber-html-reports/0'** folder.
 
 # Links
     
