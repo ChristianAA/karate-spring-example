@@ -1,3 +1,5 @@
+[![Daily Maven Tests](https://github.com/ChristianAA/karate-spring-example/actions/workflows/daily-test.yml/badge.svg?branch=master)](https://github.com/ChristianAA/karate-spring-example/actions/workflows/daily-test.yml)
+
 # REST API testing project example: Karate + Spring
 
 This repository contains the base setup of a REST API testing project, implemented with Karate + Spring Framework.
